@@ -21,6 +21,17 @@ export default function Home() {
     "Gezelligheid"
   ];
 
+  // const menuItemsData = [
+  //   {
+  //     title: 'Home',
+  //     url: '/',
+  //   },
+  //   {
+  //     title: 'Services',
+  //     url: '/services',
+  //   }
+  // ]
+
   const [isOpen, setIsOpen] = useState();
 
   const handleIsOpenClick = (index)=>{
@@ -28,11 +39,11 @@ export default function Home() {
   }
 
   return (
-    <div className="flex items-left justify-normal w-full h-screen pt-25 pr-50 pb-75 pl-0 ml-10">
+    <div className="main-container flex items-left justify-normal w-full h-screen pt-25 pr-50 pb-75 pl-0 ml-10">
 
-      <div className="float-left w-6/12 pt-20 pr-60 pb-20 pl-0">
-        <h1 className="text-4xl font-bold text-darkblue mb-2">Voor Studenten</h1>
-        <h2 className="text 2xl font-normal text-lightblue gap-3 ">DE HAAGSE ICT-CARRIÉREDAG: SPECIAAL VOOR HBO-ICT-STUDENTEN! EEN DAG VOL MOGELIJKHEDEN:</h2>
+      <div className="text-container float-left w-6/12 pt-20 pr-60 pb-20 pl-0">
+        <h1 className="heading-container text-4xl font-bold text-darkblue mb-2">Voor Studenten</h1>
+        <h2 className="subheading-container text 2xl font-normal text-lightblue gap-3 ">DE HAAGSE ICT-CARRIÉREDAG: SPECIAAL VOOR HBO-ICT-STUDENTEN! EEN DAG VOL MOGELIJKHEDEN:</h2>
 
         <div className="list_items">
           <ul className="text-darkblue text-base leading-6 gap-3 mt-5">
@@ -48,7 +59,7 @@ export default function Home() {
         <div>
           <ul className="text-darkblue text-lg mt-5 font-bold">
           {topicItems.map((item, index) => (
-          <li className="list-item " key={index}>
+          <li className="topic-item" key={index}>
             <div className="topicItem-container flex items-center justify-between">
               <span className="hover:text-lightblue">{item}</span>
             <button
@@ -74,7 +85,7 @@ export default function Home() {
             </button>
             </div>
             <div className={isOpen === index ? 'dropdown-content show' : 'dropdown-content'}>
-              <div className="text-darkblue text-base font-light">
+              <div className="innertopicText-container text-darkblue text-base font-light">
                 Het vierde jaar (semester 7 en 8) bestaat uit één semester onderwijs en daarop aansluitend een semester afstuderen.
                 Die twee semesters staan niet los van elkaar. De afstudeeropdracht moet inhoudelijk aansluiten bij het onderwijs van semester 7.
                 <br/>
@@ -94,7 +105,7 @@ export default function Home() {
         
       </div>
 
-      <div className="float-left gap-1 pt-20 pr-0 pb-20 pl-0">
+      <div className="img-container float-left gap-1 pt-20 pr-0 pb-20 pl-0">
         <Image src={highfiveImage}
           alt="Students high fiving each other"
           width={700}
