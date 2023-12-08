@@ -2,3 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+ body{
+    color: #FFFF;
+}
+
+ .dropdown-content {
+    display: none;
+  }
+  
+  .dropdown-content.show {
+    display: block;
+    padding: 16px, 4px, 16px, 4px;
+  }
+
+ .list-item{
+    padding-top:16px;
+    padding-right: 4px;
+    padding-bottom: 16px;
+    padding-left:4px;
+    border-top: 1px;
+    border-bottom:1px;
+    border-style: solid;
+    border-color: #DEE0E8;
+    
+ }
+
+ /* .topicItem-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  } */
