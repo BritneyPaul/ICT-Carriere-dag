@@ -54,11 +54,37 @@ export default function Home() {
     }
   ];
 
-  const [isOpen, setIsOpen] = useState();
+  const [isOpen, setIsOpen] = useState([]);
 
-  const handleIsOpenClick = (index)=>{
-    setIsOpen(isOpen === index ? null:index);
-  }
+  const handleIsOpenClick = (index) => {
+    setIsOpen((prevIndexes) => {
+      if (prevIndexes.includes(index)) {
+        // Als de dropdown is already open, close it
+        return prevIndexes.filter((i) => i !== index);
+      } else {
+        // Als de dropdown is closed, open it
+        return [...prevIndexes, index];
+      }
+    });
+  };
+
+  // const handleIsOpenClick = (index)=>{
+  //   setIsOpen(index);
+  // }
+
+  // const handleIsClosedClick = ()=>{
+  //   setIsOpen(null);
+  // }
+
+  // const handleIsClickArrow = (index)=>{
+  //   if(isOpen === index){
+  //     handleIsClosedClick();
+  //   }
+  //   else{
+  //   handleIsOpenClick(index);
+  //   }
+  // }
+ 
 
   return (
     <div className="main-container flex items-left justify-normal w-full h-screen pt-25 pr-50 pb-75 pl-0 ml-10">
@@ -90,8 +116,8 @@ export default function Home() {
               type="button"
             >
               <svg
-                className="w-2.5 h-2.5 ms-3"
-                aria-hidden="true"
+                  className={`w-2.5 h-2.5 ms-3 ${isOpen.includes(index) ? 'rotate-180' : ''}`}
+                  aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 10 6"
@@ -106,7 +132,7 @@ export default function Home() {
               </svg>
             </button>
             </div>
-            <div className={isOpen === index ? 'dropdown-content show' : 'dropdown-content'}>
+            <div className={isOpen.includes(index) ? 'dropdown-content show' : 'dropdown-content'}>
               <div className="innertopicText-container text-darkblue text-base font-light whitespace-pre-line	">
                 {item.dropdownContent}  
               </div>
