@@ -68,24 +68,6 @@ export default function Home() {
     });
   };
 
-  // const handleIsOpenClick = (index)=>{
-  //   setIsOpen(index);
-  // }
-
-  // const handleIsClosedClick = ()=>{
-  //   setIsOpen(null);
-  // }
-
-  // const handleIsClickArrow = (index)=>{
-  //   if(isOpen === index){
-  //     handleIsClosedClick();
-  //   }
-  //   else{
-  //   handleIsOpenClick(index);
-  //   }
-  // }
- 
-
   return (
     <div className="main-container flex items-left justify-normal w-full h-screen pt-25 pr-50 pb-75 pl-0 ml-10">
 
