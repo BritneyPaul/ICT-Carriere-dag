@@ -98,7 +98,7 @@ export default function Home() {
               type="button"
             >
               <svg
-                  className={`w-2.5 h-2.5 ms-3 ${isOpen.includes(index) ? 'rotate-180' : ''}`}
+                  className={`w-2.5 h-2.5 mr-2 ms-3 ${isOpen.includes(index) ? 'rotate-180' : ''}`}
                   aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
