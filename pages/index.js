@@ -1,6 +1,5 @@
 import Image from "next/image";
 import highfiveImage from "../public/highfiveImage.png";
-import checkmark from "../public/checkmark.png";
 import React, { useState } from 'react'
 
 
@@ -79,7 +78,18 @@ export default function Home() {
           <ul className="text-darkblue text-base leading-6 gap-3 mt-5">
             {listText.map((item, index) => (
               <li key={index}>
-                <Image src={checkmark} alt="Checkmark" className="w-3 h-3 mr-2 inline-block" />
+                <svg
+                  className="w-5 h-5 mr-2 inline-block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 12"
+                  fill="none"
+                >
+                  <path
+                    fill="#00A5B8"
+                    d="M15.4982 3.03111L8.23155 10.3444L6.8671 11.7178C6.6871 11.9 6.43599 12 6.18488 12C5.93377 12 5.68266 11.9 5.50266 11.7178L4.13821 10.3444L0.502656 6.68667C0.322656 6.50444 0.222656 6.25333 0.222656 6C0.222656 5.74667 0.322656 5.49556 0.502656 5.31333L1.8671 3.94C2.0471 3.75778 2.29821 3.65778 2.54932 3.65778C2.80043 3.65778 3.05155 3.75778 3.23155 3.94L6.18266 6.92L12.7671 0.282222C12.9471 0.1 13.1982 0 13.4493 0C13.7004 0 13.9515 0.1 14.1315 0.282222L15.496 1.65556C15.676 1.83778 15.776 2.08889 15.776 2.34222C15.776 2.59556 15.676 2.84667 15.496 3.02889L15.4982 3.03111Z"
+                  />
+                </svg>
+
                 {item}
               </li>
             ))}
