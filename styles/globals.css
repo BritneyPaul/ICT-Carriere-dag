@@ -6,6 +6,10 @@
     color: #FFFF;
 }
 
+svg> path:hover{
+    stroke: #00A5B8;
+}
+
  .dropdown-content {
     display: none;
   }
@@ -26,7 +30,7 @@
     border-color: #DEE0E8;
     
  }
- @media screen and (min-width:280px) and (max-width:360px){
+ /* @media screen and (min-width:280px) and (max-width:360px){
     .main-container {
         flex-direction: column;
         margin-left: 5px;
@@ -388,4 +392,4 @@
       }
   }
     
- 
+  */

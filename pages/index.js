@@ -24,8 +24,8 @@ export default function Home() {
     },
     {
       title: "Voorlichting stage en afstuderen",
-      dropdownContent: 
-    `Met het zoeken van een stage start je al in het tweede studiejaar. Eind semester 4 moet je stage-opdracht zijn goedgekeurd. Hoe pak je dat aan? Welke stappen moet je daarvoor zetten? Wanneer is een opdrachtgeschikt? Al deze vragen worden beantwoord in de voorlichtingssessies over de stage.
+      dropdownContent:
+        `Met het zoeken van een stage start je al in het tweede studiejaar. Eind semester 4 moet je stage-opdracht zijn goedgekeurd. Hoe pak je dat aan? Welke stappen moet je daarvoor zetten? Wanneer is een opdrachtgeschikt? Al deze vragen worden beantwoord in de voorlichtingssessies over de stage.
     
     Ook voor afstuderen geldt dat er een procedure moet worden gevolgd waarin de opdracht wordt gekeurd en er beoordelaars worden toegewezen. Hoe die procedure eruitziet en hoe je die procedure in gang zet, daarvertellen afstudeercoördinatoren je alles over in de voorlichtingssessies over afstuderen.
     
@@ -33,8 +33,8 @@ export default function Home() {
     },
     {
       title: "Professionele adviezen",
-      dropdownContent: 
-      `Krijg advies van professionele jobcoaches over hoe je je Linkedin-profiel slim inricht en laat een profielfoto maken door een professionele fotograaf. Zo kan je je nog beter positioneren voor een opdracht of baan die aansluit bij jouw wensen.
+      dropdownContent:
+        `Krijg advies van professionele jobcoaches over hoe je je Linkedin-profiel slim inricht en laat een profielfoto maken door een professionele fotograaf. Zo kan je je nog beter positioneren voor een opdracht of baan die aansluit bij jouw wensen.
   
   Ben je bezig met het schrijven van een stageplan of een afstudeerplan? Leg deze voor aan een docent en ga ter plekke aan de slag om het naar een hoger niveau te tillen.
   
@@ -42,8 +42,8 @@ export default function Home() {
     },
     {
       title: "Bedrijvenmarkt",
-      dropdownContent: 
-      `Zelf contact leggen met een bedrijf voor een stage- of afstudeeropdracht of voor een baan, dat is moeilijk. Op de bedrijvenmarkt staan ze op je te wachten! Geen drempels meer. Jij weet wat je nodig hebt, zij weten waarvoor je komt. Maak kennis met alle 50 deelnemende bedrijven. Ben je eerste- of tweedejaars, geen probleem.
+      dropdownContent:
+        `Zelf contact leggen met een bedrijf voor een stage- of afstudeeropdracht of voor een baan, dat is moeilijk. Op de bedrijvenmarkt staan ze op je te wachten! Geen drempels meer. Jij weet wat je nodig hebt, zij weten waarvoor je komt. Maak kennis met alle 50 deelnemende bedrijven. Ben je eerste- of tweedejaars, geen probleem.
   
   Er staan ook bedrijven die bijbaantjes in de aanbieding hebben. Je hoeft niet te wachten tot je derdejaars-stage om praktijkervaring op te doen! Geen toegangsticket nodig voor de bedrijvenmarkt!`
     },
@@ -68,13 +68,13 @@ export default function Home() {
   };
 
   return (
-    <div className="main-container flex items-left justify-normal w-full h-screen pt-25 pr-50 pb-75 pl-0 ml-10">
+    <div className="main-container flex items-left justify-normal w-full h-screen ml-5">
 
-      <div className="text-container float-left w-6/12 pt-20 pr-60 pb-20 pl-0">
+      <div className="text-container flex-1 pt-5 pr-10 pb-20 w-full lg:order-2 lg:py-8">
         <h1 className="heading-container text-4xl font-bold text-darkblue mb-2">Voor Studenten</h1>
         <h2 className="subheading-container text 2xl font-normal text-lightblue gap-3 ">DE HAAGSE ICT-CARRIÉREDAG: SPECIAAL VOOR HBO-ICT-STUDENTEN! EEN DAG VOL MOGELIJKHEDEN:</h2>
 
-        <div className="list_items">
+        <div className="list_items sm:w-325">
           <ul className="text-darkblue text-base leading-6 gap-3 mt-5">
             {listText.map((item, index) => (
               <li key={index}>
@@ -98,49 +98,56 @@ export default function Home() {
 
         <div>
           <ul className="text-darkblue text-lg mt-5 font-bold">
-          {topicItems.map((item, index) => (
-          <li className="topic-item" key={index}>
-            <div className="topicItem-container flex items-center justify-between">
-              <span className="hover:text-lightblue">{item.title}</span>
-            <button
-              className="dropdown-button ml-10"
-              onClick={() => handleIsOpenClick(index)}
-              type="button"
-            >
-              <svg
-                  className={`w-2.5 h-2.5 mr-2 ms-3 ${isOpen.includes(index) ? 'rotate-180' : ''}`}
-                  aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="#262E37"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 4 4 4-4"
-                />
-              </svg>
-            </button>
-            </div>
-            <div className={isOpen.includes(index) ? 'dropdown-content show' : 'dropdown-content'}>
-              <div className="innertopicText-container text-darkblue text-base font-light whitespace-pre-line	">
-                {item.dropdownContent}  
-              </div>
-            </div>
-          </li>
-        ))}
+            {topicItems.map((item, index) => (
+              <li className="topic-item w-full" key={index}>
+                <div className="topicItem-container flex items-center justify-between">
+                  <span className="hover:text-lightblue"
+                    onClick={() => handleIsOpenClick(index)}>
+                    {item.title}
+                  </span>
+
+                  <button
+                    className="dropdown-button ml-10"
+                    onClick={() => handleIsOpenClick(index)}
+                    type="button"
+                  >
+                    <svg
+                      className={`w-3.5 h-3.5 mr-2 ms-3 sm:w-14 sm:h-14 ${isOpen.includes(index) ? 'rotate-180' : ''}`}
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="#262E37"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <div className={isOpen.includes(index) ? 'dropdown-content show' : 'dropdown-content'}>
+                  <div className="innertopicText-container text-darkblue text-base font-light whitespace-pre-line	">
+                    {item.dropdownContent}
+                  </div>
+                </div>
+              </li>
+            ))}
           </ul>
         </div>
-        
+
       </div>
 
-      <div className="img-container float-left gap-1 pt-20 pr-0 pb-20 pl-0">
+      <div className="img-container flex-1 gap-1 pt-5 pr-0 pb-20 pl-0 w-full order-2 lg:order-1 lg:py-8">
         <Image src={highfiveImage}
           alt="Students high fiving each other"
           width={700}
           height={640}
+          className="w-full h-auto sm:w-359 sm:h-355 md:w-80 md:h-96 lg:w-72 lg:h-72 xl:w-80 xl:h-80"
+
         />
       </div>
 
