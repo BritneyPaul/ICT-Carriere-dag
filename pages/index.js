@@ -68,14 +68,14 @@ export default function Home() {
   };
 
   return (
-    <div className="main-container flex items-left justify-normal w-full h-screen ml-5">
+    <div className="main-container flex flex-row sm:flex-col md:flex-col lg:flex-col items-left justify-normal w-full h-screen ml-2">
 
-      <div className="text-container flex-1 pt-5 pr-10 pb-20 w-full lg:order-2 lg:py-8">
+      <div className="text-container flex-1 pt-5 pr-5 pb-20 w-full sm:w-auto sm:order-2 md:w-auto md:order-2 lg:w-auto lg:order-2">
         <h1 className="heading-container text-4xl font-bold text-darkblue mb-2">Voor Studenten</h1>
-        <h2 className="subheading-container text 2xl font-normal text-lightblue gap-3 ">DE HAAGSE ICT-CARRIÉREDAG: SPECIAAL VOOR HBO-ICT-STUDENTEN! EEN DAG VOL MOGELIJKHEDEN:</h2>
+        <h2 className="subheading-container text 2xl font-normal text-lightblue">DE HAAGSE ICT-CARRIÉREDAG: SPECIAAL VOOR HBO-ICT-STUDENTEN! EEN DAG VOL MOGELIJKHEDEN:</h2>
 
-        <div className="list_items sm:w-325">
-          <ul className="text-darkblue text-base leading-6 gap-3 mt-5">
+        <div className="list_items">
+          <ul className="text-darkblue text-base leading-6 grid gap-2 mt-5">
             {listText.map((item, index) => (
               <li key={index}>
                 <svg
@@ -89,7 +89,6 @@ export default function Home() {
                     d="M15.4982 3.03111L8.23155 10.3444L6.8671 11.7178C6.6871 11.9 6.43599 12 6.18488 12C5.93377 12 5.68266 11.9 5.50266 11.7178L4.13821 10.3444L0.502656 6.68667C0.322656 6.50444 0.222656 6.25333 0.222656 6C0.222656 5.74667 0.322656 5.49556 0.502656 5.31333L1.8671 3.94C2.0471 3.75778 2.29821 3.65778 2.54932 3.65778C2.80043 3.65778 3.05155 3.75778 3.23155 3.94L6.18266 6.92L12.7671 0.282222C12.9471 0.1 13.1982 0 13.4493 0C13.7004 0 13.9515 0.1 14.1315 0.282222L15.496 1.65556C15.676 1.83778 15.776 2.08889 15.776 2.34222C15.776 2.59556 15.676 2.84667 15.496 3.02889L15.4982 3.03111Z"
                   />
                 </svg>
-
                 {item}
               </li>
             ))}
@@ -97,11 +96,11 @@ export default function Home() {
         </div>
 
         <div>
-          <ul className="text-darkblue text-lg mt-5 font-bold">
+          <ul className="text-darkblue text-lg mt-10 font-bold">
             {topicItems.map((item, index) => (
               <li className="topic-item w-full" key={index}>
                 <div className="topicItem-container flex items-center justify-between">
-                  <span className="hover:text-lightblue"
+                  <span className="hover:text-lightblue transition-transform transform-gpu hover:translate-x-1 hover:translate-y-1"
                     onClick={() => handleIsOpenClick(index)}>
                     {item.title}
                   </span>
@@ -112,7 +111,7 @@ export default function Home() {
                     type="button"
                   >
                     <svg
-                      className={`w-3.5 h-3.5 mr-2 ms-3 sm:w-14 sm:h-14 ${isOpen.includes(index) ? 'rotate-180' : ''}`}
+                      className={`w-3.5 h-3.5 mr-2 ms-3 ${isOpen.includes(index) ? 'rotate-180' : ''}`}
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -141,12 +140,12 @@ export default function Home() {
 
       </div>
 
-      <div className="img-container flex-1 gap-1 pt-5 pr-0 pb-20 pl-0 w-full order-2 lg:order-1 lg:py-8">
+      <div className="img-container flex-1 gap-1 pt-5 pr-0 pb-0 pl-0 w-full sm:w-auto sm:order-1 md:w-auto md:order-1 lg:w-auto lg:order-1">  
         <Image src={highfiveImage}
           alt="Students high fiving each other"
           width={700}
           height={640}
-          className="w-full h-auto sm:w-359 sm:h-355 md:w-80 md:h-96 lg:w-72 lg:h-72 xl:w-80 xl:h-80"
+          className="w-full h-auto sm:w-359 sm:h-355 md:w-359 md:h-360 lg:w-785 lg:h-786 xl:w-550 xl:h-481"
 
         />
       </div>
@@ -155,3 +154,5 @@ export default function Home() {
     </div>
   )
 }
+
+// lg:w-auto lg:order-1
