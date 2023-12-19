@@ -119,9 +119,9 @@ export default function Home() {
                     >
                       <path
                         stroke="#262E37"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="m1 1 4 4 4-4"
                       />
                     </svg>
@@ -140,13 +140,13 @@ export default function Home() {
 
       </div>
 
-      <div className="img-container flex-1 gap-1 pt-5 pr-0 pb-0 pl-0 w-full sm:w-auto sm:order-1 md:w-auto md:order-1 lg:w-auto lg:order-1">  
+      <div className="img-container flex-1 gap-1 pt-0 pr-0 pb-0 pl-0 w-full sm:w-auto sm:order-1 md:w-auto md:order-1 lg:w-auto lg:order-1">  
         <Image src={highfiveImage}
           alt="Students high fiving each other"
           width={700}
           height={640}
+          priority
           className="w-full h-auto sm:w-359 sm:h-355 md:w-359 md:h-360 lg:w-785 lg:h-786 xl:w-550 xl:h-481"
-
         />
       </div>
 
