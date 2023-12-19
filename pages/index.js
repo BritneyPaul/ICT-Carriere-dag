@@ -98,7 +98,7 @@ export default function Home() {
         <div>
           <ul className="text-darkblue text-lg mt-10 font-bold">
             {topicItems.map((item, index) => (
-              <li className="topic-item w-full" key={index}>
+              <li className="topic-item w-full pt-4 pr-1 pb-4 pl-1 border-t border-b border-solid	border-lightgray" key={index}>
                 <div className="topicItem-container flex items-center justify-between">
                   <span className="hover:text-lightblue transition-transform transform-gpu hover:translate-x-1 hover:translate-y-1"
                     onClick={() => handleIsOpenClick(index)}>
