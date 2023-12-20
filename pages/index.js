@@ -147,7 +147,7 @@ export default function Home() {
           height={540}
           priority
           as="image"
-          className=" xl:pl-10 2xl:pl-10 3xl:pl-10 w-full h-auto sm:w-359 sm:h-355 md:w-359 md:h-360 lg:w-600 lg:h-540"
+          className=" xl:pl-10 2xl:pl-10 3xl:pl-10 w-full h-auto sm:w-359 sm:h-355 md:w-359 md:h-360"
         />
       </div>
 
