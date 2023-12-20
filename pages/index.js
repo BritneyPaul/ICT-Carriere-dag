@@ -68,7 +68,7 @@ export default function Home() {
   };
 
   return (
-    <div className="main-container flex flex-row sm:flex-col md:flex-col lg:flex-col items-left justify-normal w-full h-screen ml-2">
+    <div className="main-container flex flex-row sm:flex-col md:flex-col lg:flex-col items-left justify-normal w-full h-screen pl-2">
 
       <div className="text-container flex-1 pt-5 pr-5 pb-20 w-full sm:w-auto sm:order-2 md:w-auto md:order-2 lg:w-auto lg:order-2">
         <h1 className="heading-container text-4xl font-bold text-darkblue mb-2">Voor Studenten</h1>
@@ -140,13 +140,14 @@ export default function Home() {
 
       </div>
 
-      <div className="img-container flex-1 gap-1 pt-0 pr-0 pb-0 pl-0 w-full sm:w-auto sm:order-1 md:w-auto md:order-1 lg:w-auto lg:order-1">  
+      <div className="img-container flex-1 gap-1 pt-2 xl:pl-10 2xl:pl-10 pr-2 w-full sm:w-auto sm:order-1 md:w-auto md:order-1 lg:w-auto lg:order-1">  
         <Image src={highfiveImage}
           alt="Students high fiving each other"
-          width={700}
-          height={640}
+          width={600}
+          height={540}
           priority
-          className="w-full h-auto sm:w-359 sm:h-355 md:w-359 md:h-360 lg:w-785 lg:h-786 xl:w-550 xl:h-481"
+          as="image"
+          className=" xl:pl-10 2xl:pl-10 3xl:pl-10 w-full h-auto sm:w-359 sm:h-355 md:w-359 md:h-360 lg:w-600 lg:h-540"
         />
       </div>
 
@@ -155,4 +156,3 @@ export default function Home() {
   )
 }
 
-// lg:w-auto lg:order-1

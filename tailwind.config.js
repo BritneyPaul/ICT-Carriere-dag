@@ -21,18 +21,17 @@ module.exports = {
         'sm':{'min': '280px', 'max': '374px'},
         // => @media screen and (min-width:280px) and (max-width:360px){
         'md': { 'min': '375px', 'max': '812px' },
-        // => @media screen and (min-width: 375px) and (max-width:802px){
+        // => @media screen and (min-width: 375px) and (max-width:812px){
 
         'lg': { 'min': '813px', 'max': '1023px' },
-        // => @media screen and (min-width:820px)and (orientation: portrait){
+        // => @media screen and (min-width:813px)and (max-width:1023px){
 
         'xl': { 'min': '1024px', 'max': '1279px' },
         // => @media (min-width: 1024px and max-width: 1279px) { ... }
 
         '2xl': { 'min': '1280px', 'max': '1535px' },
         // => @media (min-width: 1280px and max-width: 1535px) { ... }
-
-        // '3xl': { 'min': '1536px' },
+        '3xl': { 'min': '1536px' },
         // => @media (min-width: 1536px) { ... }
       },
     },
